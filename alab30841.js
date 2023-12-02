@@ -67,3 +67,17 @@ for (let i = 0; i < rows.length; i++) {
 }
 
 
+//////////// ALAB 308.4.1
+///////// Part 2
+////////// Expanding Functionality
+
+let lines = csvString.split('\n');
+let colNum = lines[0].split(',').length;
+let twoD = [];
+for(let line of lines){
+    let row = line.split(',');
+    if(row.length === colNum)
+    twoD.push(row);
+}
+console.log(twoD);
+
