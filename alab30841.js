@@ -67,35 +67,3 @@ for (let i = 0; i < rows.length; i++) {
 }
 
 
-//////////// ALAB 308.4.1
-///////// Part 2
-////////// Expanding Functionality
-
-let lines = csvString.split('\n');
-let colNum = lines[0].split(',').length;
-let twoD = [];
-for(let line of lines){
-    let row = line.split(',');
-    if(row.length === colNum)
-    twoD.push(row);
-}
-console.log(twoD);
-
-//////////// ALAB 308.4.1
-///////// Part 3
-//////////  Transforming Data
-
-//using const map1 = array1.map((x) => x * 2);
-let headers = lines[0].split(',');
-let result = [];
-for(let i =1; i<lines.length;i++){
-    let values = lines[i].split(',');
-    let dataObj ={}
-for(let j=0; j< headers.length;j++){
-    dataObj[headers[j]]= values[j];
-}
-    result.push(dataObj)
-}
-console.log(result);
-
-
